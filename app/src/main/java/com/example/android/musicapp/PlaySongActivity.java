@@ -21,8 +21,6 @@ public class PlaySongActivity extends AppCompatActivity {
     private TextView mTextTitle;
 
     private String mIntentMessage;
-    private ImageButton mPlayButton;
-    private ImageButton mStopButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,5 @@ public class PlaySongActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         mIntentMessage = bundle.getString("message");
         mTextTitle.setText(mIntentMessage);
-
     }
-
 }

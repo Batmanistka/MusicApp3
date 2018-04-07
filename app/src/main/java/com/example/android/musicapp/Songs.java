@@ -17,7 +17,6 @@ public class Songs {
         mArtist = Artist;
         mSongTitle = Title;
     }
-
     //Get name of Artists
     public String getArtists() {
         return mArtist;
@@ -27,5 +26,4 @@ public class Songs {
     public String getSongTitle() {
         return mSongTitle;
     }
-
 }

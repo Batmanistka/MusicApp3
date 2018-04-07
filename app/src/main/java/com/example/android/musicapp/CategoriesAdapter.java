@@ -27,6 +27,7 @@ public class CategoriesAdapter extends ArrayAdapter {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.activity_main, parent, false);
         }
+
         Categories my_categories = (Categories) getItem(position);
         TextView categoryTextView = (TextView) listItemView.findViewById(R.id.category_text_view);
         categoryTextView.setText(my_categories.getCategories());

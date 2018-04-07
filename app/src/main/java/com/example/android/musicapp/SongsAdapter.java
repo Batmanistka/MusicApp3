@@ -28,6 +28,7 @@ public class SongsAdapter extends ArrayAdapter {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.activity_songs_list, parent, false);
         }
+
         Songs my_song = (Songs) getItem(position);
         TextView artistTextView = (TextView) listItemView.findViewById(R.id.artist_text_view);
         artistTextView.setText(my_song.getArtists());
