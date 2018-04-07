@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+
+    <!-- Categories -->
+    <string name="cat_energetic">Energetic</string>
+    <string name="cat_chill">Chill Out</string>
+    <string name="cat_filmM">Film Music</string>
+    <string name="songsList">Songs List</string>
+    <string name="playSong">Play Song</string>
+
+    <!-- Songs List by categories -->
+    <string name="energetic_songs">Energetic</string>
+    <string name="chill_songs">Chill Out</string>
+    <string name="film_songs">Film Music</string>
+</resources>
