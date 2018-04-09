@@ -19,7 +19,6 @@ import android.widget.Toast;
 public class PlaySongActivity extends AppCompatActivity {
 
     private TextView mTextTitle;
-
     private String mIntentMessage;
 
     @Override
@@ -29,6 +28,9 @@ public class PlaySongActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play_song);
 
         mTextTitle = (TextView) findViewById(R.id.title_ps_TextView);
+
+        getSupportActionBar().setTitle("Play Song");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Display intent message - title, artist and category
         Bundle bundle = getIntent().getExtras();

@@ -20,11 +20,13 @@ public class SongsListActivity extends AppCompatActivity implements ListView.OnI
     private String mIntentMessage;
     private String mSongsCategory;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate (savedInstanceState);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.songs_list);
+
+        getSupportActionBar().setTitle("Songs List");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Bundle bundle = getIntent().getExtras();
         mIntentMessage = bundle.getString("message");
@@ -34,7 +36,7 @@ public class SongsListActivity extends AppCompatActivity implements ListView.OnI
     }
 
     // Create a list of songs
-    public void createSongsList () {
+    public void createSongsList() {
         ArrayList<Songs> songs = new ArrayList<Songs>();
 
         if (mIntentMessage.equals("Chill Out")) {
@@ -42,16 +44,12 @@ public class SongsListActivity extends AppCompatActivity implements ListView.OnI
             songs.add(new Songs("Cafe del Mar", "Music Mix 12"));
             songs.add(new Songs("Coccolino Deep", "Dont forget to fly"));
             songs.add(new Songs("Infinite", "Ambient Mix"));
-        }
-
-        else if (mIntentMessage.equals(getString(R.string.cat_energetic))) {
+        } else if (mIntentMessage.equals(getString(R.string.cat_energetic))) {
             mSongsCategory = getString(R.string.cat_energetic);
             songs.add(new Songs("Bbbb", "Bbbb"));
             songs.add(new Songs("Bbbbbbb", "Bbbbbbbb"));
             songs.add(new Songs("Bbbbbbbbbbb", "Bbbbbbbbbb"));
-        }
-
-        else if (mIntentMessage.equals(getString(R.string.cat_filmM))) {
+        } else if (mIntentMessage.equals(getString(R.string.cat_filmM))) {
             mSongsCategory = getString(R.string.cat_filmM);
             songs.add(new Songs("Ccc", "Ccc"));
             songs.add(new Songs("Cccc", "Cccc"));
@@ -78,7 +76,7 @@ public class SongsListActivity extends AppCompatActivity implements ListView.OnI
         String title = textViewTitle.getText().toString();
 
         intentExtra = mSongsCategory + System.getProperty("line.separator") +
-        artist + System.getProperty("line.separator") + title;
+                artist + System.getProperty("line.separator") + title;
         Intent i = new Intent(context, PlaySongActivity.class);
         i.putExtra("message", intentExtra);
         startActivity(i);

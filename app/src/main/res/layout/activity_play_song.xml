@@ -35,7 +35,8 @@
             <ImageButton
                 android:id="@+id/button_play"
                 style="@style/image_button_one"
-                android:background="@drawable/play"/>
+                android:background="@drawable/play"
+                android:layout_marginRight="20dp"/>
 
             <ImageButton
                 android:id="@+id/button_stop"
